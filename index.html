@@ -5,13 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TestWork</title>
+    
 </head>
 <body>
+        
+        
 <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: url(img/game-bg.jpg) no-repeat center center / cover;
+        }
         table {
             margin: 5% auto;
             box-sizing: border-box;
             border-collapse: collapse;
+            background-color: antiquewhite;
         }
         td {
             box-sizing: border-box;
@@ -30,16 +42,18 @@
             outline: none;
             margin: 0 auto;
             display: block;
+            color: red;
+            font-weight: bold;
         }
     </style>
 
-    <div id="game"></div>
+<div id="game"></div>
 <form>
     <button class="btn">NEW GAME</button>
 </form>
     
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="crossorigin="anonymous"></script>
     <script src="js.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="crossorigin="anonymous"></script> -->
+   
 </body>
 </html>
