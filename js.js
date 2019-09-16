@@ -79,6 +79,15 @@ class Game {
                     
                 });
 
+                td.addEventListener('mouseleave', function(event){
+
+                    let allTd = document.querySelectorAll('td');
+                    allTd.forEach(function(elem){
+                        elem.classList.remove('hover');
+                    })
+                    
+                });
+
             }
 
             table.appendChild(tr);
