@@ -13,6 +13,8 @@ class Game {
         this.clubs = '♣';
 
         this.rows = [];
+
+        this.counter = 0;
        
         this.createTable(rowsNum, colsNum);
         
@@ -100,10 +102,13 @@ class Game {
             let cell = event.target.closest('td');
 
             let targetClass = event.target.className;
+
+            
             
             if(cell){
 
                 let allTarget = document.querySelectorAll('.hover');
+                let score = document.querySelector('.score');
 
                 allTarget.forEach(function(elem){
                     elem.innerText = '';
@@ -111,6 +116,9 @@ class Game {
                 });
 
                 its.getNeighbors(cell, targetClass);
+
+                its.counter++;
+                score.innerText = its.counter;
             }
             
         });
