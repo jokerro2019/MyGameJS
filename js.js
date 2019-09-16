@@ -6,14 +6,11 @@ class Game {
 
         let rowsNum = 6;
         let colsNum = 7;
-        
         this.diamonds = '♢';
         this.hearts = '♡';
         this.spades = '♠‌';
         this.clubs = '♣';
-
         this.rows = [];
-
         this.counter = 0;
        
         this.createTable(rowsNum, colsNum);
@@ -100,10 +97,7 @@ class Game {
         table.addEventListener('click', function(event){
 
             let cell = event.target.closest('td');
-
             let targetClass = event.target.className;
-
-            
             
             if(cell){
 
@@ -113,10 +107,10 @@ class Game {
                 allTarget.forEach(function(elem){
                     elem.innerText = '';
                     elem.classList.remove('hover');
+                    elem.classList.add('remove');
                 });
 
                 its.getNeighbors(cell, targetClass);
-
                 its.counter++;
                 score.innerText = its.counter;
             }
